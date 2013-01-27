@@ -47,6 +47,11 @@ fi
 # Paths
 #
 
+# Disable global rc files due to broken /usr/libexec/path_helper.
+if [[ "$OSTYPE" == darwin* ]]; then
+  unsetopt GLOBAL_RCS
+fi
+
 typeset -gU cdpath fpath mailpath path
 typeset -gxU MANPATH
 typeset -gxUT INFOPATH infopath

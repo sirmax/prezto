@@ -36,14 +36,15 @@ version is 4.3.10.
 ### Mac OS X
 
 If you have administrator privileges, you must fix an Apple-introduced problem
-in Mac OS X 10.5 Leopard by executing the following command, or BASH and Zsh
-will have the wrong `PATH` when executed non-interactively.
+in Mac OS X 10.5 Leopard, and above, by executing the following command, or
+Zsh will have the wrong `PATH` when executed non-interactively.
 
-    sudo chmod ugo-x /usr/libexec/path_helper
+    sudo mv /etc/{zshenv,zprofile}
 
-`path_helper` is intended to make it easier for installers to add new paths to
-the environment without having to edit shell configuration files by adding
-a file with a path to the */etc/paths.d* directory.
+The above file uses a utility, `path_helper`, which is intended to make it
+easier for installers to add new paths to the environment without having to edit
+shell configuration files by adding a file with a path to the */etc/paths.d*
+directory.
 
 Unfortunately, `path_helper` always reads paths from */etc/paths* set by Apple
 then paths from */etc/paths.d* set by third party installers, and lastly paths
