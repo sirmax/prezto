@@ -9,3 +9,10 @@
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Maven
+export MAVEN_OPTS='-Xmx1g -XX:MaxPermSize=256m'
