@@ -18,7 +18,7 @@ fpath=("${0:h}/external/src" $fpath)
 # Options
 #
 
-setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
+# setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
 setopt ALWAYS_TO_END       # Move cursor to the end of a completed word.
 setopt PATH_DIRS           # Perform path search even on command names with slashes.
 setopt AUTO_MENU           # Show completion menu on a successive tab press.
@@ -72,7 +72,8 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
 
 # Fuzzy match mistyped completions.
-zstyle ':completion:*' completer _complete _match _approximate
+# zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*' completer _complete _match
 zstyle ':completion:*:match:*' original only
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
 
