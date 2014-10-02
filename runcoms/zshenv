@@ -16,3 +16,10 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Maven
 export MAVEN_OPTS='-Xmx1g -XX:MaxPermSize=256m'
+
+# SBT
+export SBT_OPTS='
+-XX:+CMSClassUnloadingEnabled
+-XX:MaxPermSize=256M
+-XX:ReservedCodeCacheSize=192m
+'
