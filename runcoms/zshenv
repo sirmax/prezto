@@ -12,14 +12,14 @@ fi
 
 
 # Java
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Maven
-export MAVEN_OPTS='-Xmx1g -XX:MaxPermSize=256m'
+# export MAVEN_OPTS='-Xmx1g -XX:MaxPermSize=256m' # Used with pre-Java-8 JREs
+export MAVEN_OPTS='-Xmx1g'
 
 # SBT
 export SBT_OPTS='
 -XX:+CMSClassUnloadingEnabled
--XX:MaxPermSize=256M
 -XX:ReservedCodeCacheSize=192m
 '
