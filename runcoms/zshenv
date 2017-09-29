@@ -23,3 +23,7 @@ export SBT_OPTS='
 -XX:+CMSClassUnloadingEnabled
 -XX:ReservedCodeCacheSize=192m
 '
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
