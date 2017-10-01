@@ -13,3 +13,6 @@ fi
 # Customize to your needs...
 
 unsetopt BRACE_CCL
+
+# Enable fuzzy-finder https://github.com/junegunn/fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
