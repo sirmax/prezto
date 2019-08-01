@@ -13,6 +13,7 @@ fi
 # Customize to your needs...
 
 unsetopt BRACE_CCL
+setopt HIST_IGNORE_SPACE
 
 # Enable fuzzy-finder https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
